@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafika Komputer - Learning Hub</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons for premium icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">
+                    <i class="ph-fill ph-shapes"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Grafika Komputer</h1>
+                    <span>TIM UNRENDERED</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 class="section-title">NAVIGASI KULIAH</h2>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#" class="nav-item active" id="nav-home" onclick="goHome(event)">
+                            <i class="ph ph-squares-four"></i>
+                            Beranda
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 class="section-title">HASIL PRAKTIKUM</h2>
+                <ul class="nav-list" id="sidebar-materi-list">
+                    <!-- Injected by JS -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <!-- Breadcrumbs can go here in the future -->
+                </div>
+                <div class="topbar-right">
+                    <div class="search-bar">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" placeholder="Cari praktikum...">
+                    </div>
+                    <button class="icon-btn">
+                        <i class="ph ph-sun"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="ph ph-scan"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Grid View -->
+            <div id="dashboard-view" class="view-section active">
+                <div class="dashboard-header">
+                    <span class="badge">SHOWCASE</span>
+                    <h2>Koleksi Praktikum</h2>
+                </div>
+                <div class="cards-grid" id="materi-grid">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+
+            <!-- Iframe View -->
+            <div id="iframe-view" class="view-section hidden">
+                <div class="iframe-header">
+                    <button class="back-btn" onclick="goHome(event)">
+                        <i class="ph ph-arrow-left"></i> Kembali
+                    </button>
+                    <h2 id="iframe-title">Praktikum 1</h2>
+                </div>
+                <div class="iframe-container">
+                    <iframe id="praktikum-frame" src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Background glow effects -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
