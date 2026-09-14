@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGL Fundamental - Praktikum 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div id="hud" class="hud">
+      <h3>HUD</h3>
+      <p id="fpsDisplay">FPS: 0</p>
+      <p id="primitiveCount">Primitives: 3</p>
+      <p id="activeModeDisplay">Draw Mode: TRIANGLES</p>
+      <p id="mouseNdcDisplay">Mouse NDC: (0.00, 0.00)</p>
+    </div>
+
+    <canvas id="glCanvas" width="800" height="600"></canvas>
+    
+    <div class="controls">
+      <label for="drawMode">Star Draw Mode: </label>
+      <select id="drawMode">
+        <option value="TRIANGLE_FAN">TRIANGLE_FAN</option>
+        <option value="LINE_LOOP">LINE_LOOP</option>
+        <option value="POINTS">POINTS</option>
+      </select>
+      <p class="hint">Gunakan tombol panah (Arrow Keys) untuk menggerakkan Segitiga berwarna.</p>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
