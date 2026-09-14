@@ -5,11 +5,11 @@ let positionLocation, colorLocation;
 let vao;
 
 // Primitives Data
-// 1. Colorful Triangle (Keyboard controlled)
+// 1. Colorful Triangle
 const triangleBase = new Float32Array([
   -0.15, -0.15,
-   0.15, -0.15,
-   0.00,  0.15
+  0.15, -0.15,
+  0.00, 0.15
 ]);
 const triangleColors = new Float32Array([
   1.0, 0.0, 0.0, // Red
@@ -22,14 +22,14 @@ const triMoveSpeed = 0.02;
 let trianglePositionBuffer;
 let triangleColorBuffer;
 
-// 2. Solid Rectangle (Auto move and bounce)
+// 2. Solid Rectangle
 const rectBase = new Float32Array([
   -0.1, -0.1,
-   0.1, -0.1,
-  -0.1,  0.1,
-  -0.1,  0.1,
-   0.1, -0.1,
-   0.1,  0.1
+  0.1, -0.1,
+  -0.1, 0.1,
+  -0.1, 0.1,
+  0.1, -0.1,
+  0.1, 0.1
 ]);
 const rectColors = new Float32Array([
   1.0, 1.0, 0.0, // Yellow
@@ -46,7 +46,7 @@ let rectSpeedY = 0.012;
 let rectPositionBuffer;
 let rectColorBuffer;
 
-// 3. Procedural Star (Draw mode changeable)
+// 3. Procedural Star
 const numPoints = 10;
 const outerRadius = 0.25;
 const innerRadius = 0.1;
@@ -56,7 +56,7 @@ for (let i = 0; i < numPoints * 2; i++) {
   const angle = (i * Math.PI) / numPoints;
   const r = (i % 2 === 0) ? outerRadius : innerRadius;
   starBase.push(Math.cos(angle) * r + 0.5, Math.sin(angle) * r - 0.5); // Offset position
-  
+
   if (i % 2 === 0) {
     starColorsArray.push(1.0, 0.5, 0.0); // Orange outer
   } else {
@@ -246,10 +246,10 @@ function setupEvents() {
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-    
+
     const ndcX = (x / canvas.width) * 2 - 1;
     const ndcY = 1 - (y / canvas.height) * 2;
-    
+
     mouseNdcDisplay.innerText = `Mouse NDC: (${ndcX.toFixed(2)}, ${ndcY.toFixed(2)})`;
   });
 
@@ -257,7 +257,7 @@ function setupEvents() {
   document.getElementById("drawMode").addEventListener("change", (e) => {
     const val = e.target.value;
     activeModeDisplay.innerText = `Draw Mode: ${val}`;
-    
+
     if (val === "TRIANGLE_FAN") starDrawMode = gl.TRIANGLE_FAN;
     else if (val === "LINE_LOOP") starDrawMode = gl.LINE_LOOP;
     else if (val === "POINTS") starDrawMode = gl.POINTS;
@@ -282,10 +282,10 @@ function drawPrimitive(positionBuffer, colorBuffer, drawMode, vertexCount) {
 function drawScene() {
   // Draw 1. Triangle
   drawPrimitive(trianglePositionBuffer, triangleColorBuffer, gl.TRIANGLES, 3);
-  
+
   // Draw 2. Rectangle
   drawPrimitive(rectPositionBuffer, rectColorBuffer, gl.TRIANGLES, 6);
-  
+
   // Draw 3. Procedural Star
   drawPrimitive(starPositionBuffer, starColorBuffer, starDrawMode, numPoints * 2);
 }
@@ -315,13 +315,13 @@ function render(time) {
 
 function main() {
   initializeWebGL();
-  
+
   const shaders = createShaders();
   createProgram(shaders.vertexShader, shaders.fragmentShader);
-  
+
   createBuffers();
   setupAttributes();
-  
+
   requestAnimationFrame(render);
 }
 
