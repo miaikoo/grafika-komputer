@@ -20,7 +20,7 @@ const materiData = [
         number: "03",
         title: "Interactive Transformation Playground",
         description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 3",
-        path: "praktikum-03/index.html",
+        path: "praktikum-webgl-03/index.html",
         icon: "ph-arrows-out-cardinal"
     }
 ];
