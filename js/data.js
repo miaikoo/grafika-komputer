@@ -14,5 +14,13 @@ const materiData = [
         description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 2",
         path: "praktikum-webgl-02/index.html",
         icon: "ph-cube"
+    },
+    {
+        id: "p3",
+        number: "03",
+        title: "Interactive Transformation Playground",
+        description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 3",
+        path: "praktikum-03/index.html",
+        icon: "ph-arrows-out-cardinal"
     }
 ];
