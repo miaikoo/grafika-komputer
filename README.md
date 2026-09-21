@@ -60,6 +60,21 @@ Introduction to low-level graphics programming using **WebGL2** and **GLSL ES 3.
 
 ---
 
+### [Praktikum 03: Interactive Transformation Playground (WebGL2)](praktikum-webgl-03)
+Moving, rotating, and resizing objects purely through a 3×3 **Model Matrix** passed to the vertex shader as a `mat3` uniform — the original vertex data is never modified.
+
+- **Key Highlights & Features:**
+  - **Matrix-Driven Rendering:** Geometry stays in local coordinates inside one static GPU buffer; Object A and Object B reuse the same vertex buffer and differ only by their Model Matrix.
+  - **Complete Transform Set:** Translation, rotation, uniform and non-uniform scaling, composed through matrix multiplication in homogeneous coordinates.
+  - **Interactive & Automatic Motion:** Object A uses state-based keyboard input scaled by `deltaTime`; Object B self-rotates with a sinusoidal pulsing scale.
+  - **Transform Order Comparison:** `T × R × S` (spins in place) versus `R × T × S` (orbits the world origin), built from identical parameters.
+  - **Visual Reference & HUD:** X/Y axes and world origin drawn under an identity matrix, with a live readout of position, rotation, scale, and active transform order.
+  - **Completed Optional Challenges:** Reset transform (`R`) and toggle transform order (`T`).
+
+- **Controls:** `Arrow Keys` translate · `Q` / `E` rotate · `+` / `-` uniform scale · `Z` / `X` scale X · `C` / `V` scale Y · `R` reset · `T` toggle order
+
+---
+
 ## Project Structure
 
 ```text
@@ -74,6 +89,7 @@ Introduction to low-level graphics programming using **WebGL2** and **GLSL ES 3.
 │   └── main.js                 # Dashboard renderer & iframe controller
 ├── praktikum-grafika-p1/       # Practicum 01: HTML5 Canvas 2D
 ├── praktikum-webgl-02/         # Practicum 02: WebGL2 Fundamentals
+├── praktikum-webgl-03/         # Practicum 03: Transformation & Coordinate System
 └── README.md
 ```
 
@@ -84,7 +100,7 @@ Introduction to low-level graphics programming using **WebGL2** and **GLSL ES 3.
 - **HTML5 & Vanilla CSS3** — Responsive layout, CSS variables, flexbox/grid, and modern glassmorphic styling.
 - **JavaScript (ES6+)** — Modular DOM manipulation, animation loops (`requestAnimationFrame`), and event handling.
 - **HTML5 Canvas 2D Context** — Immediate mode 2D graphics rendering.
-- **WebGL 2.0 & GLSL ES 3.00** — Hardware-accelerated GPU pipeline, buffers, shaders, and attributes.
+- **WebGL 2.0 & GLSL ES 3.00** — Hardware-accelerated GPU pipeline, buffers, shaders, attributes, and matrix uniforms.
 - **[Phosphor Icons](https://phosphoricons.com/)** — Crisp and versatile icon library.
 - **[Inter Font](https://fonts.google.com/specimen/Inter)** — Typography by Rasmus Andersson.
 
