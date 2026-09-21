@@ -53,4 +53,4 @@ Buka `http://localhost:8000` di browser.
 
 ## Video Demo
 
-Link: ...
+Link: [https://youtu.be/A-hdsZOyrJE](https://youtu.be/A-hdsZOyrJE)
