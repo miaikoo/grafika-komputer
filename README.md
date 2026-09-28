@@ -7,12 +7,12 @@ A centralized, interactive learning portal and showcase for **Computer Graphics 
 ## Team Information — **TIM UNRENDERED**
 
 **Course:** Computer Graphics (Grafika Komputer) — Class B  
-**Department:** Informatics / Computer Science  
+**Department:** Informatics / Computer Science
 
-| Name | Student ID (NRP) | Role |
-| :--- | :--- | :--- |
-| **Randi Palguna Artayasa** | `5025231020` | Team Member |
-| **Hikmia Sofia Nur Izzati** | `5025231147` | Team Member |
+| Name                        | Student ID (NRP) | Role        |
+| :-------------------------- | :--------------- | :---------- |
+| **Randi Palguna Artayasa**  | `5025231020`     | Team Member |
+| **Hikmia Sofia Nur Izzati** | `5025231147`     | Team Member |
 
 ---
 
@@ -31,6 +31,7 @@ This repository contains both the **Showcase Dashboard Hub** and individual week
 ## Practicum Modules
 
 ### [Praktikum 01: Graphics Playground (HTML5 Canvas 2D)](praktikum-grafika-p1)
+
 An interactive 2D graphics canvas exploring coordinate transformations, primitive rendering, animation loops, and event handling.
 
 - **Key Highlights & Completed Challenges:**
@@ -43,6 +44,7 @@ An interactive 2D graphics canvas exploring coordinate transformations, primitiv
 ---
 
 ### [Praktikum 02: WebGL Fundamentals & Primitives (WebGL2)](praktikum-webgl-02)
+
 Introduction to low-level graphics programming using **WebGL2** and **GLSL ES 3.00** shader pipelines.
 
 - **Key Highlights & Features:**
@@ -61,6 +63,7 @@ Introduction to low-level graphics programming using **WebGL2** and **GLSL ES 3.
 ---
 
 ### [Praktikum 03: Interactive Transformation Playground (WebGL2)](praktikum-webgl-03)
+
 Moving, rotating, and resizing objects purely through a 3×3 **Model Matrix** passed to the vertex shader as a `mat3` uniform — the original vertex data is never modified.
 
 - **Key Highlights & Features:**
@@ -72,6 +75,22 @@ Moving, rotating, and resizing objects purely through a 3×3 **Model Matrix** pa
   - **Completed Optional Challenges:** Reset transform (`R`) and toggle transform order (`T`).
 
 - **Controls:** `Arrow Keys` translate · `Q` / `E` rotate · `+` / `-` uniform scale · `Z` / `X` scale X · `C` / `V` scale Y · `R` reset · `T` toggle order
+
+---
+
+### [Praktikum 04: Camera, Projection & 3D Depth (WebGL2)](praktikum-camera-04)
+
+Exploring the 3D camera pipeline by rendering a rotating cube with perspective and orthographic projection modes, adjustable camera position, and live rendering metrics.
+
+- **Key Highlights & Features:**
+  - **Camera Transform:** Real-time camera movement using a `lookAt` view matrix with keyboard-driven position updates.
+  - **Projection Modes:** Toggle between perspective and orthographic projection to compare visual behavior directly.
+  - **FOV & Clipping Control:** Adjust field of view, switch among preset values, and cycle near/far clipping planes.
+  - **Depth Testing:** Enable or disable `gl.DEPTH_TEST` to see how hidden-surface removal affects the scene.
+  - **3D Cube Scene:** Multiple cubes rendered in the same view space with independent local transforms and animated rotation.
+  - **Interactive HUD:** Live display of projection type, camera coordinates, FOV angle, clipping values, and depth test status.
+
+- **Controls:** `Arrow Keys` move camera X/Y · `W` / `S` move camera Z · `PageUp` / `PageDown` adjust camera height · `P` toggle projection · `[` / `]` adjust FOV · `1` / `2` / `3` FOV presets · `N` cycle clipping preset · `D` toggle depth test · `R` reset scene
 
 ---
 
@@ -90,6 +109,7 @@ Moving, rotating, and resizing objects purely through a 3×3 **Model Matrix** pa
 ├── praktikum-grafika-p1/       # Practicum 01: HTML5 Canvas 2D
 ├── praktikum-webgl-02/         # Practicum 02: WebGL2 Fundamentals
 ├── praktikum-webgl-03/         # Practicum 03: Transformation & Coordinate System
+├── praktikum-camera-04/        # Practicum 04: Camera, Projection & Depth
 └── README.md
 ```
 
