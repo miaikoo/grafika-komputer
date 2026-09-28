@@ -1,3 +1,14 @@
+/*
+Praktikum Grafika Komputer - Pertemuan 2
+WebGL Primitives
+
+Nama Anggota 1 : Randi Palguna Artayasa
+NRP Anggota 1  : 5025231020
+Nama Anggota 2 : Hikmia Sofia Nur Izzati
+NRP Anggota 2  : 5025231147
+Kelas: B
+*/
+
 let gl;
 let canvas;
 let program;

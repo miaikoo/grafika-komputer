@@ -22,5 +22,13 @@ const materiData = [
         description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 3",
         path: "praktikum-webgl-03/index.html",
         icon: "ph-arrows-out-cardinal"
+    },
+    {
+        id: "p4",
+        number: "04",
+        title: "Rotating 3D Cube Camera Playground",
+        description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 4",
+        path: "praktikum-camera-04/index.html",
+        icon: "ph-video-camera"
     }
 ];

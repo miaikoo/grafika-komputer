@@ -23,7 +23,7 @@ canvas {
   border: 2px solid #2aa8ff;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(42, 168, 255, 0.3);
-  background-color: #03050a; /* Warna background untuk webgl di set juga di js */
+  background-color: #03050a;
 }
 
 .hud {
@@ -34,7 +34,7 @@ canvas {
   padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid #444;
-  pointer-events: none; /* Supaya tidak memblokir event mouse canvas */
+  pointer-events: none;
 }
 
 .hud h3 {
@@ -58,7 +58,8 @@ canvas {
   box-sizing: border-box;
 }
 
-.controls label, .controls select {
+.controls label,
+.controls select {
   font-size: 16px;
 }
 
