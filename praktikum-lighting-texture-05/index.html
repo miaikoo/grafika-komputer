@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Textured and Lit Cube Playground</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main class="app">
+<header>
+<h1>Textured and Lit Cube Playground</h1>
+<p>WebGL — Lighting, Shading &amp; Texture</p>
+</header>
+
+<!-- Tempat WebGL menggambar. width/height = resolusi gambar dalam piksel -->
+<canvas id="glCanvas" width="960" height="600"></canvas>
+
+<!-- Panel di bawah kanvas, dikelompokkan per kategori. Nilai diisi main.js -->
+<section class="panel">
+<strong>Lighting:</strong>
+<label><input type="checkbox" id="useAmbient" checked /> Ambient</label>
+<label><input type="checkbox" id="useDiffuse" checked /> Diffuse</label>
+<label><input type="checkbox" id="useSpecular" checked /> Specular</label>
+<span>Mode: <span id="modeInfo"></span></span>
+<span>Ambient strength:</span>
+<label><input type="radio" name="ambientStrength" value="0" /> 0</label>
+<label><input type="radio" name="ambientStrength" value="0.2" checked /> 0.2</label>
+<label><input type="radio" name="ambientStrength" value="0.5" /> 0.5</label>
+<span>Shininess: <span id="shininessInfo"></span></span>
+</section>
+
+<section class="panel">
+<strong>Texture:</strong>
+<span>Filtering: <span id="filterInfo"></span></span>
+<span>Wrapping: <span id="wrapInfo"></span></span>
+<span>UV Scale: <span id="uvInfo"></span></span>
+</section>
+
+<section class="panel">
+<strong>Object:</strong>
+<span>Shading: <span id="shadingInfo"></span></span>
+<span>Scale: <span id="scaleInfo"></span></span>
+<span>Normal: <span id="normalInfo"></span></span>
+</section>
+
+<section class="panel">
+<strong>Challenge:</strong>
+<span>Light position marker: <span id="markerInfo"></span></span>
+<label><input type="checkbox" id="useUVScroll" /> UV scrolling</label>
+</section>
+
+<section class="controls">
+<strong>Kontrol:</strong>
+<span>Arrow = Light X/Y</span>
+<span>W/S = Light Z</span>
+<span>- / + = Shininess</span>
+<span>T = Filtering</span>
+<span>G = Wrapping</span>
+<span>[ / ] = UV Scale</span>
+<span>F = Flat/Smooth</span>
+<span>N = Non-uniform scale</span>
+<span>M = Normal matrix on/off</span>
+<span>P = Jeda rotasi</span>
+<span>R = Reset</span>
+</section>
+</main>
+
+<!-- type="module" supaya main.js boleh memakai import -->
+<script type="module" src="./main.js"></script>
+</body>
+</html>

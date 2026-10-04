@@ -30,5 +30,13 @@ const materiData = [
         description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 4",
         path: "praktikum-camera-04/index.html",
         icon: "ph-video-camera"
+    },
+    {
+        id: "p5",
+        number: "05",
+        title: "Textured and Lit Cube Playground",
+        description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 5",
+        path: "praktikum-lighting-texture-05/index.html",
+        icon: "ph-lightbulb"
     }
 ];

@@ -94,6 +94,22 @@ Exploring the 3D camera pipeline by rendering a rotating cube with perspective a
 
 ---
 
+### [Praktikum 05: Lighting, Shading & Texture (WebGL2)](praktikum-lighting-texture-05)
+
+A rotating textured cube lit with the Phong reflection model (ambient, diffuse, specular), with interactive control over the light, the material, and the texture sampling settings.
+
+- **Key Highlights & Features:**
+  - **Phong Lighting:** Toggle ambient, diffuse, and specular components to compare Ambient Only, Diffuse Only, Specular Only, Ambient + Diffuse, and All Components.
+  - **Movable Light & Shininess:** Move the point light in X/Y/Z, choose an ambient strength of 0, 0.2, or 0.5, and set shininess from 2 to 128.
+  - **Procedural Texture:** A 64×64 checkerboard generated on a canvas and sampled in the fragment shader.
+  - **Filtering & Wrapping:** Switch between `LINEAR` and `NEAREST` filtering, cycle `REPEAT` / `CLAMP_TO_EDGE` / `MIRRORED_REPEAT`, and set the UV scale from 0.25 to 5.
+  - **Normal Matrix Comparison:** Toggle flat/smooth shading and non-uniform scale, and compare the correct normal matrix with the plain model 3×3.
+  - **Completed Challenges:** An unlit marker cube at the light position, and UV scrolling.
+
+- **Controls:** `Arrow Keys` move light X/Y · `W` / `S` move light Z · `-` / `+` shininess · `T` toggle filtering · `G` cycle wrapping · `[` / `]` UV scale · `F` flat/smooth · `N` non-uniform scale · `M` normal matrix on/off · `P` pause rotation · `R` reset
+
+---
+
 ## Project Structure
 
 ```text
@@ -110,6 +126,7 @@ Exploring the 3D camera pipeline by rendering a rotating cube with perspective a
 ├── praktikum-webgl-02/         # Practicum 02: WebGL2 Fundamentals
 ├── praktikum-webgl-03/         # Practicum 03: Transformation & Coordinate System
 ├── praktikum-camera-04/        # Practicum 04: Camera, Projection & Depth
+├── praktikum-lighting-texture-05/ # Practicum 05: Lighting, Shading & Texture
 └── README.md
 ```
 
