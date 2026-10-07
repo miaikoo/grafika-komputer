@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Mini 3D Scene</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="hud">
+        <strong>Three.js Mini 3D Scene</strong>
+        <span id="info">Memuat...</span>
+        <button id="pause-button">Jeda animasi</button>
+        <button id="cam-switch-button">Ganti kamera</button>
+        <button id="reset-button">Reset kamera</button>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

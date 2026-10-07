@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #050816;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* canvas bawaan berperilaku seperti teks (inline) dan menyisakan
+   celah beberapa piksel di bawahnya; block menghilangkan celah itu */
+canvas {
+  display: block;
+}
+
+#hud {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  color: white;
+  background: rgba(8, 15, 30, 0.78);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 8px;
+  /* klik dan drag di atas HUD diteruskan ke canvas,
+     jadi kamera tetap bisa diputar walau kursor di atas HUD */
+  pointer-events: none;
+}
+
+/* tombol di dalam HUD tetap harus bisa diklik */
+#hud button {
+  pointer-events: auto;
+  justify-self: start;
+  padding: 4px 10px;
+  cursor: pointer;
+}

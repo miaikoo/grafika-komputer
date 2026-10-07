@@ -1,6 +1,6 @@
 # Computer Graphics Showcase Hub
 
-A centralized, interactive learning portal and showcase for **Computer Graphics (Grafika Komputer)** lab assignments and projects, built with modern web technologies, HTML5 Canvas 2D, and WebGL 2.0.
+A centralized, interactive learning portal and showcase for **Computer Graphics (Grafika Komputer)** lab assignments and projects, built with modern web technologies, HTML5 Canvas 2D, WebGL 2.0, and Three.js.
 
 ---
 
@@ -110,6 +110,25 @@ A rotating textured cube lit with the Phong reflection model (ambient, diffuse, 
 
 ---
 
+### [Praktikum 06: Mini 3D Scene (Three.js)](praktikum-mini3d-threejs-06)
+
+A small workshop scene built with **Three.js**: a workbench holding a metal key, a vase, and a carrot crate loaded from glTF files, surrounded by animated primitives and lit by an orbiting directional light that casts real-time shadows.
+
+- **Key Highlights & Features:**
+  - **Built-in Geometries:** Box, sphere, plane (ground), torus knot, and cone.
+  - **glTF Models:** Four models loaded with `GLTFLoader`, using the PBR materials stored in the files.
+  - **Material Gallery:** `MeshBasicMaterial`, `MeshLambertMaterial`, `MeshPhongMaterial` (shininess 200), and `MeshStandardMaterial` with a stone texture, side by side.
+  - **Lighting & Shadows:** Ambient light plus a directional light with a 1024×1024 shadow map, and a shadow camera fitted to the 10×10 ground.
+  - **Animation:** A spinning, pulsing cube, a bobbing sphere, and a directional light orbiting the scene, all driven by `THREE.Timer` delta time.
+  - **Perspective & Orthographic Cameras:** Switch between both cameras while keeping the current position and orbit target.
+  - **Scene HUD:** Live object count, active camera type, and camera position.
+  - **Completed Challenges:** Two extra geometries, material gallery, OrthographicCamera, light animation, shadow quality, scene information, and toggle animation.
+  - **No Build Step:** Three.js is loaded from the jsDelivr CDN through an import map, so the page runs directly on GitHub Pages.
+
+- **Controls:** `Left drag` orbit · `Right drag` pan · `Scroll` zoom · **Jeda animasi** pause/resume · **Ganti kamera** switch camera · **Reset kamera** reset view
+
+---
+
 ## Project Structure
 
 ```text
@@ -127,6 +146,7 @@ A rotating textured cube lit with the Phong reflection model (ambient, diffuse, 
 ├── praktikum-webgl-03/         # Practicum 03: Transformation & Coordinate System
 ├── praktikum-camera-04/        # Practicum 04: Camera, Projection & Depth
 ├── praktikum-lighting-texture-05/ # Practicum 05: Lighting, Shading & Texture
+├── praktikum-mini3d-threejs-06/   # Practicum 06: Mini 3D Scene with Three.js
 └── README.md
 ```
 
@@ -138,6 +158,7 @@ A rotating textured cube lit with the Phong reflection model (ambient, diffuse, 
 - **JavaScript (ES6+)** — Modular DOM manipulation, animation loops (`requestAnimationFrame`), and event handling.
 - **HTML5 Canvas 2D Context** — Immediate mode 2D graphics rendering.
 - **WebGL 2.0 & GLSL ES 3.00** — Hardware-accelerated GPU pipeline, buffers, shaders, attributes, and matrix uniforms.
+- **[Three.js](https://threejs.org/)** — High-level 3D library for scenes, materials, lights, shadows, and glTF models (Practicum 06, loaded from CDN).
 - **[Phosphor Icons](https://phosphoricons.com/)** — Crisp and versatile icon library.
 - **[Inter Font](https://fonts.google.com/specimen/Inter)** — Typography by Rasmus Andersson.
 
