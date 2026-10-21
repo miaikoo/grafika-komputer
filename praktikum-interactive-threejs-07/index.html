@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Interactive 3D Application</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <aside id="hud">
+        <h1>Interactive 3D Prototype</h1>
+
+        <div>Hover: <span id="hoverInfo">-</span></div>
+        <div>Selected: <span id="selectedInfo">-</span></div>
+        <div>Animation: <span id="animationInfo">-</span></div>
+        <div>Loading: <span id="loadingInfo">ready</span></div>
+        <div>Environment: <span id="environmentInfo">ON</span></div>
+
+        <h2>Info Object</h2>
+        <div>Name: <span id="nameInfo">-</span></div>
+        <div>Position: <span id="positionInfo">-</span></div>
+        <div>Rotation: <span id="rotationInfo">-</span></div>
+        <div>Scale: <span id="scaleInfo">-</span></div>
+        <div>Material: <span id="materialInfo">-</span></div>
+
+        <button id="cam-switch-button">Ganti kamera</button>
+        <button id="reset-button">Reset kamera</button>
+      </aside>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

@@ -46,5 +46,13 @@ const materiData = [
         description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 6",
         path: "praktikum-mini3d-threejs-06/index.html",
         icon: "ph-cube-focus"
+    },
+    {
+        id: "p7",
+        number: "07",
+        title: "Interactive 3D Prototype dengan Three.js",
+        description: "MODUL PRAKTIKUM GRAFIKA KOMPUTER — PERTEMUAN 7",
+        path: "praktikum-interactive-threejs-07/index.html",
+        icon: "ph-cursor-click"
     }
 ];

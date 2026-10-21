@@ -129,6 +129,23 @@ A small workshop scene built with **Three.js**: a workbench holding a metal key,
 
 ---
 
+### [Praktikum 07: Interactive 3D Prototype (Three.js)](praktikum-interactive-threejs-07)
+
+The Practicum 06 scene grown into an interactive 3D application: a parent-child hierarchy demo, a PBR sphere, and an animated robot loaded from GLB, all of which can be hovered and selected with raycasting.
+
+- **Key Highlights & Features:**
+  - **Scene Graph & Hierarchy:** A `THREE.Group` with nested child meshes; local vs world position logged to the Console.
+  - **PBR Materials:** `MeshStandardMaterial` with different roughness and metalness values.
+  - **GLB Model & Animation:** `model.glb` (RobotExpressive, CC0) loaded with `GLTFLoader`, traversed for shadows, and animated with `AnimationMixer`.
+  - **Raycasting:** Pointer converted to NDC, recursive intersection, and child meshes mapped back to their selectable root.
+  - **Hover & Selection:** Scale feedback (1.06 hover, 1.12 selected) and HUD info. Dragging the camera never changes the selection.
+  - **Environment Map:** `RoomEnvironment` as `scene.environment`, while the background stays a solid color.
+  - **Completed Challenges:** Multiple animation clips, information panel, and environment toggle.
+
+- **Controls:** `Left drag` orbit · `Right drag` pan · `Scroll` zoom · `Click` select · `1`–`3` animation clips · `E` environment · **Ganti kamera** / **Reset kamera** buttons
+
+---
+
 ## Project Structure
 
 ```text
@@ -147,6 +164,7 @@ A small workshop scene built with **Three.js**: a workbench holding a metal key,
 ├── praktikum-camera-04/        # Practicum 04: Camera, Projection & Depth
 ├── praktikum-lighting-texture-05/ # Practicum 05: Lighting, Shading & Texture
 ├── praktikum-mini3d-threejs-06/   # Practicum 06: Mini 3D Scene with Three.js
+├── praktikum-interactive-threejs-07/ # Practicum 07: Interactive 3D Prototype with Three.js
 └── README.md
 ```
 
@@ -158,7 +176,7 @@ A small workshop scene built with **Three.js**: a workbench holding a metal key,
 - **JavaScript (ES6+)** — Modular DOM manipulation, animation loops (`requestAnimationFrame`), and event handling.
 - **HTML5 Canvas 2D Context** — Immediate mode 2D graphics rendering.
 - **WebGL 2.0 & GLSL ES 3.00** — Hardware-accelerated GPU pipeline, buffers, shaders, attributes, and matrix uniforms.
-- **[Three.js](https://threejs.org/)** — High-level 3D library for scenes, materials, lights, shadows, and glTF models (Practicum 06, loaded from CDN).
+- **[Three.js](https://threejs.org/)** — High-level 3D library for scenes, materials, lights, shadows, and glTF models, raycasting, and animation (Practicum 06–07, loaded from CDN).
 - **[Phosphor Icons](https://phosphoricons.com/)** — Crisp and versatile icon library.
 - **[Inter Font](https://fonts.google.com/specimen/Inter)** — Typography by Rasmus Andersson.
 
